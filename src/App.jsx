@@ -50,7 +50,7 @@ function Icon({ name, size = 22 }) {
 function Brand({ compact = false }) {
   return (
     <a className={`brand${compact ? ' brand--compact' : ''}`} href="#top" aria-label="Novaspire Tech home">
-      <img src="/novaspire-logo.jpg" alt="" />
+      <img src={`${import.meta.env.BASE_URL}novaspire-logo.jpg`} alt="" />
       <span className="brand__name">NOVASPIRE<span>TECH</span></span>
     </a>
   );

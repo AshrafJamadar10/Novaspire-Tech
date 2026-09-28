@@ -11,16 +11,14 @@ npm run dev
 
 Create a production build with `npm run build`; Vite writes the deployable site to `dist/`.
 
-## Netlify deployment
+## GitHub Pages deployment
 
-`netlify.toml` configures Netlify to run `npm run build` and publish `dist/`.
+The workflow in `.github/workflows/pages.yml` builds pull requests targeting `main` and deploys pushes to `main` to GitHub Pages. Vite uses relative asset paths so the site works both at a user site root and under a repository subpath.
 
-The GitHub Actions workflow in `.github/workflows/netlify.yml` builds pull requests targeting `main` and deploys pushes to `main` to the Netlify production site. To enable it:
+To enable Pages:
 
-1. Push this project to a GitHub repository and connect that repository to your Netlify site.
-2. In the GitHub repository, open **Settings → Secrets and variables → Actions** and add:
-   - `NETLIFY_AUTH_TOKEN` — a personal access token created in Netlify.
-   - `NETLIFY_SITE_ID` — the Site ID shown in the Netlify site's general settings.
-3. Push or merge changes to `main`. Pull requests run the build; pushes to `main` build and deploy production.
+1. Push this project to a GitHub repository with a `main` branch.
+2. In the repository, open **Settings → Pages** and set the build and deployment source to **GitHub Actions**.
+3. Push or merge changes to `main`. Pull requests run the build; pushes to `main` build and deploy the site.
 
-Keep both values in GitHub Actions secrets; do not put them in source files.
+The published URL appears in the workflow run and under **Settings → Pages**. No deployment secrets are required.
