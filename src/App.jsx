@@ -160,7 +160,7 @@ function App() {
             <div className="eyebrow"><span /> WEBSITE & APPLICATION DEVELOPMENT</div>
             <h1>Turn your ideas into <span>powerful digital solutions.</span></h1>
             <p className="hero-description">
-              Modern websites, web and mobile applications, and custom software—built to move your business forward.
+              Modern websites, web and mobile applications, and custom software for businesses in Malkapur, Shahuwadi, Kolhapur, and nearby areas.
             </p>
             <div className="hero-actions">
               <a className="button button--primary" href="#services">Explore our services <Icon name="arrow" size={18} /></a>
@@ -210,6 +210,9 @@ function App() {
                 <a className="button button--outline button--purple" href="#contact">Let's build yours <Icon name="arrow" size={17} /></a>
               </article>
             </div>
+            <p className="service-area-copy" data-reveal>
+              Novaspire Tech helps local businesses in Malkapur, Shahuwadi and Kolhapur build a stronger online presence with custom websites and web applications. Based in Malkapur, founder Ashraf Jamadar works with businesses across the region.
+            </p>
             <p className="pricing-note" data-reveal>Every project is different. Get in touch for a custom quote and a friendly chat about your idea.</p>
           </div>
         </section>
